@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content-wrapper {
+            height: 400px;
+            width: 50%;
+            overflow-y: scroll;
+        }
+
+        .menu-wrapper {
+            position: fixed;
+            height: inherit;
+            width: 200px;
+            background-color: red;
+        }
+
+        .content {
+            height: 800px;
+            margin-left: 200px;
+        }
+
+        .active {
+            background-color: blue;
+            color: red;
+            transition: .5s ease-out;
+        }
+    </style>
+</head>
+<body>
+<h2>Basic usage</h2>
+<div class="content-wrapper">
+    <div class="menu-wrapper">
+        <ul class="menu">
+            <li><a href="#start">start</a></li>
+            <li><a href="#middle">middle</a></li>
+            <li><a href="#end">end</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <section id="start" style="height: 300px; border:1px solid green; background-color: lightgreen">
+            <p>start</p>
+        </section>
+        <section id="middle" style="height: 400px; border:1px solid red; background-color: lightcoral">
+            <p>middle</p>
+        </section>
+        <section style="height: 300px; border:1px solid yellow; background-color: lightpink">
+            <p>middle sub (next block without any target link), middle active class has gone by defaults, set option
+                `fixed` to false to stay active.</p>
+        </section>
+        <section id="end" style="height: 500px; border:1px solid blue; background-color: lightblue">
+            <p>end</p>
+        </section>
+    </div>
+</div>
+
+<script src="../vendor/components/jquery/jquery.min.js"></script>
+<script src="../dist/jquery.scroll-spy.js"></script>
+<script>
+    $('.content-wrapper').scrollSpy({
+        target: $('.menu a')
+    }).scroll();
+</script>
+
+</body>
+</html>
