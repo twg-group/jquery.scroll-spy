@@ -1,12 +1,12 @@
 ## ScrollSpy
 _jquery plugin_
 
-## Install
+### Install
 ```
 composer require twg-group/jquery.scroll-spy
 ```
 
-Basic usage
+### Basic usage
 ```javascript
 $('.content-wrapper').scrollSpy({
     target: $('.menu a'), // required
