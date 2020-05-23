@@ -1,7 +1,7 @@
 ## ScrollSpy
 _jquery plugin_
 
-####Basic usage
+Basic usage
 
 ```javascript
     $('.content-wrapper').scrollSpy({
