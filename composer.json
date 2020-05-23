@@ -1,4 +1,11 @@
 {
+    "name": "twg/jquery.scroll-spy",
+    "description": "Simple jquery scroll spy plugin",
+    "keywords": [
+        "scrollSpy"
+    ],
+    "homepage": "https://github.com/twg-group/jquery.scroll-spy",
+    "version": "1.0.0",
     "require": {
         "components/jquery": "^3.5"
     }
