@@ -5,7 +5,7 @@
         "scrollSpy"
     ],
     "homepage": "https://github.com/twg-group/jquery.scroll-spy",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "components/jquery": "^3.5"
     }
