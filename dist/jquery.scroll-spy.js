@@ -34,7 +34,7 @@
     let eventListener = function () {
         $.each(collection, function () {
             let calc = this.element.offset().top + this.element.outerHeight() - container.offset().top;
-            if ((calc > 0 && calc < this.element.outerHeight()) ||
+            if ((Math.floor(calc) > 0 && calc < this.element.outerHeight()) ||
                 Math.floor(this.element.offset().top - container.offset().top) === 0) {
                 if (!this.link.hasClass(activeClass)) {
                     target.removeClass(activeClass);
