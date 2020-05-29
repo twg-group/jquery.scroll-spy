@@ -1,12 +1,12 @@
 {
-    "name": "twg-group/jquery.scroll-spy",
-    "description": "Simple jquery scroll spy plugin",
-    "keywords": [
-        "scrollSpy"
-    ],
-    "homepage": "https://github.com/twg-group/jquery.scroll-spy",
-    "version": "1.0.2",
-    "require": {
-        "components/jquery": "^3.5"
-    }
+  "name": "twg-group/jquery.scroll-spy",
+  "description": "Simple jquery scroll spy plugin",
+  "keywords": [
+    "scrollSpy"
+  ],
+  "homepage": "https://github.com/twg-group/jquery.scroll-spy",
+  "version": "1.0.2",
+  "require": {
+    "bower-asset/jquery": "~3.5.0"
+  }
 }
