@@ -20,22 +20,24 @@
         activeClass = options.activeClass;
         fixed = options.fixed;
 
-        let hash = null;
+        let hash = null, element = null;
         $.each(target, function () {
-            (hash = this.href.split('#')[1]) !== undefined ? collection.push({
-                link: $(this),
-                element: container.find(`[id="${hash}"]`)
-            }) : null;
+            (hash = this.href.split('#')[1]) !== undefined
+                ? (element = container.find(`[id="${hash}"]`)).length > 0 ? collection.push({
+                    link: $(this),
+                    element: element
+                }) : null : null;
         });
         this.unbind('scroll', eventListener).bind('scroll', eventListener);
         return this;
     };
 
     let eventListener = function () {
+        let relativeOffsetTop = collection.length > 0 ? collection[0].element.offset().top + container.scrollTop() : 0;
         $.each(collection, function () {
-            let calc = this.element.offset().top + this.element.outerHeight() - container.offset().top;
-            if ((Math.floor(calc) > 0 && calc < this.element.outerHeight()) ||
-                Math.floor(this.element.offset().top - container.offset().top) === 0) {
+            let _ot = this.element.offset().top + container.scrollTop() - relativeOffsetTop;
+            let _st = container.scrollTop();
+            if (_ot <= _st && _st < _ot + this.element.outerHeight()) {
                 if (!this.link.hasClass(activeClass)) {
                     target.removeClass(activeClass);
                     this.link.addClass(activeClass);

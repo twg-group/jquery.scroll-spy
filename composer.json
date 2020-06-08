@@ -5,8 +5,12 @@
     "scrollSpy"
   ],
   "homepage": "https://github.com/twg-group/jquery.scroll-spy",
-  "version": "1.0",
-  "require": {
-    "bower-asset/jquery": "~3.5.0"
-  }
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matvey Alekseev",
+      "email": "mat@twg.su"
+    }
+  ],
+  "version": "1.0"
 }
