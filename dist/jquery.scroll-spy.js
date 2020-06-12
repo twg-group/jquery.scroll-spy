@@ -36,7 +36,7 @@
         let relativeOffsetTop = collection.length > 0 ? collection[0].element.offset().top + container.scrollTop() : 0;
         $.each(collection, function () {
             let _ot = Math.floor(this.element.offset().top + container.scrollTop() - relativeOffsetTop);
-            let _st = container.scrollTop();
+            let _st = Math.floor(container.scrollTop());
             if (_ot <= _st && _st < _ot + this.element.outerHeight()) {
                 if (!this.link.hasClass(activeClass)) {
                     target.removeClass(activeClass);
